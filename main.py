@@ -1,3 +1,6 @@
+from Lista_Ingredientes import Lista_Ingredientes 
+from Lista_Pedidos import Lista_Pedidos
+
 def Menu():
 
     opcion = True  
@@ -8,7 +11,8 @@ def Menu():
         print("---1. Ingresar Orden")
         print("---2. Entregar Orden")
         print("---3. Gráfica")
-        print("---4. Salir")
+        print("---4. Datos del Estudiante")
+        print("---5. Salir")
         print("** Elija una opción **")
         opcion = input ("")
         if opcion == "1" :
@@ -27,8 +31,16 @@ def Menu():
             print("---------- Gráfica ----------")
             #print(Datos)
             print("")
-
         elif opcion == "4" :
+            print("")
+            print("--------- Datos ---------")
+            print("")
+            print("Leonel Antonio González García")
+            print("201709088")
+            print("3636192320115")
+            print("Laboratorio de Introducción a la Programación 2")
+            print("")
+        elif opcion == "5" :
             print("")
             print("----------Gracias, vuelve pronto :) --------")
             opcion = False
@@ -42,6 +54,7 @@ def Datos():
     datos = ""
     nombre = ""
     telefono = ""
+    pizza = ""
 
     print("Ingrese su dirección")
     direccion = input("")
@@ -52,8 +65,48 @@ def Datos():
     print("Ingrese su número de teléfono")
     telefono = input("")
 
+    print("Ingrese la cantidad de pizzas")
+    cantpizza = input("")
+    
+    opcion = True
+    while opcion : 
+        print("------Elija el Ingrediente para su pizza------")
+        print("1. Pepperoni")
+        print("2. Salchicha")
+        print("3. Carne")
+        print("4. Queso")
+        print("5. Piña")
+        opcion = input("")
+        
+        if opcion == "1":
+            print("")
+            print("--Ingrediente Pepperoni Agregado--")
+            PedidoNuevo.Lista_Ingredientes.Ingrediente_Nuevo("Pepperoni",3)
+            print("")
+        elif opcion == "2":
+            print("")
+            print("--Ingrediente Salchicha Agregado--")
+            PedidoNuevo.Lista_Ingredientes.Ingrediente_Nuevo("Salchicha",4)
+            print("")
+        elif opcion == "3":
+            print("")
+            print("--Ingrediente Carne Agregado--")
+            PedidoNuevo.Lista_Ingredientes.Ingrediente_Nuevo("Carne",10)
+            print("")
+        
+        elif opcion == "4":
+            print("")
+            print("-- Ingrediente Queso Agregado--")
+            PedidoNuevo.Lista_Ingredientes.Ingrediente_Nuevo("Queso",5)
+            print("")
+        elif opcion == "5":
+            print("")
+            print("-- Ingrediente Piña Agregado--")
+            PedidoNuevo.Lista_Ingredientes.Ingrediente_Nuevo("Piña",2)
+            print("")
+
+
 
 Menu()
-
 
 
