@@ -5,11 +5,19 @@ class Lista_Pedidos():
     def __init__(self):
         self.anterior = None
         self.siguiente = None
-        self.time = 0
+        self.tamaño = 0
     
-    def PedidoNuevo(self,nombreCliente,addresCliente,numberCliente,cantidadPizza):
-        nuevo = PedidoNuevo(nombreCliente,addresCliente,numberCliente,cantidadPizza)
-        self.size += 1
+    def PedidoNuevo(self,nameCliente,addresCliente,numberCliente,cantidadPizza):
+        nuevo = Pedido_nodo(nameCliente,addresCliente,numberCliente,cantidadPizza)
+        self.tamaño += 1
+        if self.anterior is None:
+            self.anterior = nuevo
+            self.ultimo = nuevo
+        else :
+            self.ultimo.set_siguiente(nuevo)
+            self.ultimo = nuevo
+        
+        return nuevo
 
 
 

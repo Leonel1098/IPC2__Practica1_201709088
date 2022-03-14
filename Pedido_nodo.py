@@ -1,4 +1,4 @@
-
+from Lista_Ingredientes import Lista_Ingredientes
 class Pedido_nodo :
 
     def __init__(self,nameCliente,addresCliente,numberCliente,cantidadPizza):
@@ -6,7 +6,7 @@ class Pedido_nodo :
         self.addresCliente = addresCliente
         self.numberCliente = numberCliente
         self.cantidadPizza = cantidadPizza
-        self.Lista_Pedidos = Lista_Pedidos()
+        self.Lista_Ingredientes = Lista_Ingredientes()
         self.time = None
         self.siguiente = None
 

@@ -13,7 +13,7 @@ class Lista_Ingredientes:
             self.anterior = newIngrediente
             self.ultimo = newIngrediente
         else : 
-            self.ultimo.set_Ingredientesiguiente(Ingrediente_Nuevo)
+            self.ultimo.set_Ingredientesiguiente(newIngrediente)
             self.ultimo = newIngrediente
     
     def Ingrediente_Mostrar(self):

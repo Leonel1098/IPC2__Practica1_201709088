@@ -2,7 +2,7 @@ class Ingredientes_nodo:
     def __init__(self, nombre, tiempo):
         self.nombre = nombre
         self.tiempo = tiempo
-        self.siguiente = siguiente
+        self.siguiente = None
             
      
     
